@@ -7,7 +7,7 @@ import ToyContainer from "./ToyContainer";
 function App() {
   const [showForm, setShowForm] = useState(false);
   const [toyData, setToyData] =useState([]);
-
+  const [likes, setLikes] = useState(0);
 
 
   useEffect(() => { 
@@ -41,7 +41,7 @@ function App() {
       <div className="buttonContainer">
         <button onClick={handleClick}>Add a Toy</button>
       </div>
-      <ToyContainer setToyData={setToyData}toyData={toyData}/>
+      <ToyContainer likes={likes} setLikes={setLikes} setToyData={setToyData}toyData={toyData}/>
     </>
   );
 }
